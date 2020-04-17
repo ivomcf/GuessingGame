@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">GuessingGame</string>
+    <string name="guess_the_number">Guess the Number!</string>
+    <string name="guess_the_number_from_1_to_10">Guess the number from 1 to 10!</string>
+    <string name="your_guess">Your Guess</string>
+    <string name="done">Done</string>
+    <string name="answer">Answer:</string>
+    <string name="tries">Tries:</string>
+</resources>

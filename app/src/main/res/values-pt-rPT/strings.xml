@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Jogo da Adivinha</string>
+    <string name="guess_the_number">Adivinhe o Numero</string>
+    <string name="guess_the_number_from_1_to_10">Adivinhe o Numero de 1 a 10!</string>
+    <string name="your_guess">Sua Tentativa</string>
+    <string name="done">Feito</string>
+    <string name="answer">Resposta:</string>
+    <string name="tries">Tentativas:</string>
+</resources>
