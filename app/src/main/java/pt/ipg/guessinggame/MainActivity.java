@@ -13,8 +13,11 @@ public class MainActivity extends AppCompatActivity {
 
     int numberOfTries = 0;
     int input = -1;
-    Random rand = new Random();
-    int guessedNumber = rand.nextInt(10);
+
+    public void randomNum(View view){
+        Random rand = new Random();
+        int guessedNumber = rand.nextInt(10);
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,9 +48,22 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        if (input == guessedNumber){
+            TextView tvgn = (TextView) findViewById(R.id.textViewAnswerDisplay);
+            tvgn.setText("Correct!");
+        } else if (input < guessedNumber){
+            TextView tvgn = (TextView) findViewById(R.id.textViewAnswerDisplay);
+            tvgn.setText("Too low!");
+        } else {
+            TextView tvgn = (TextView) findViewById(R.id.textViewAnswerDisplay);
+            tvgn.setText("Too high!");
+        }
+
+        editTextInput.getText().clear();
+
         numberOfTries++;
-        TextView tv = (TextView) findViewById(R.id.textViewTriesDisplay);
-        tv.setText("" + numberOfTries);
+        TextView tvnot = (TextView) findViewById(R.id.textViewTriesDisplay);
+        tvnot.setText("" + numberOfTries);
 
     }
 }
