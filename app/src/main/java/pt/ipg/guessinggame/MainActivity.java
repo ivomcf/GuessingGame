@@ -14,10 +14,8 @@ public class MainActivity extends AppCompatActivity {
     int numberOfTries = 0;
     int input = -1;
 
-    public void randomNum(View view){
-        Random rand = new Random();
-        int guessedNumber = rand.nextInt(10);
-    }
+    Random rand = new Random();
+    int guessedNumber = rand.nextInt((9)+1);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
