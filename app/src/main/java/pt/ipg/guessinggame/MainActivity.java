@@ -11,6 +11,11 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+    int numberOfTries = 0;
+    int input = -1;
+    Random rand = new Random();
+    int guessedNumber = rand.nextInt(10);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         EditText editTextInput = (EditText) findViewById(R.id.editTextInput);
         String StrInput = editTextInput.getText().toString();
 
-        int input = -1;
         try {
             input = Integer.parseInt(StrInput);
         } catch (NumberFormatException e){
@@ -41,8 +45,9 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
-        Random rand = new Random();
-        int guessedNumber = rand.nextInt(10);
-        int numberOfTries = 0;
+        numberOfTries++;
+        TextView tv = (TextView) findViewById(R.id.textViewTriesDisplay);
+        tv.setText("" + numberOfTries);
+
     }
 }
