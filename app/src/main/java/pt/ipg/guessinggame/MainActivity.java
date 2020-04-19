@@ -20,13 +20,25 @@ public class MainActivity extends AppCompatActivity {
     public void readData(View view) {
 
         EditText editTextInput = (EditText) findViewById(R.id.editTextInput);
-
         String StrInput = editTextInput.getText().toString();
+
         int input = -1;
         try {
             input = Integer.parseInt(StrInput);
         } catch (NumberFormatException e){
             e.printStackTrace();
+        }
+
+        if (input < 0){
+            editTextInput.setError("It needs to be higher than 0!");
+            editTextInput.requestFocus();
+            return;
+        }
+
+        if (input > 10){
+            editTextInput.setError("It needs to be lower than 10!");
+            editTextInput.requestFocus();
+            return;
         }
 
         Random rand = new Random();
